@@ -1,0 +1,33 @@
+.bg-img {
+   
+    background-image: url("http://cdn26.us1.fansshare.com/photo/backgrounddesigns/marvellous-cool-black-and-white-background-about-remodel-wallpaper-hd-design-with-cool-black-and-white-background-background-designs-1906911226.jpg");
+    min-height:100%;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    position:relative;
+  }
+
+  .pad{
+      padding-top: 10%;
+      padding-left: 30%;
+      padding-right: 40%;
+     
+  }
+
+  .card{
+padding-left: 15%;
+  }
+  mat-form-field{
+      width: 90%;
+  }
+
+  .forget{
+      text-decoration: none;
+      color: blue;
+  }
+  .button1{
+    width: 90%; 
+    background-color: black;
+    color: white;
+  }

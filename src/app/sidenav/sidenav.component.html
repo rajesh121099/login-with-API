@@ -1,0 +1,242 @@
+<mat-drawer-container class="example-container mat-typography" autosize>
+  <mat-drawer #drawer mode="side" disableClose="true" opened="true">
+
+    <mat-nav-list style="overflow-x: hidden; overflow-y: hidden;">
+      <mat-list-item>
+        <p *ngIf="!isExpanded" class="saas">SaaS</p>
+        <h4 mat-line *ngIf="isExpanded" class="saas">SaaS Kit</h4>
+      </mat-list-item>
+      <hr>
+      <mat-list-item>
+        <img class="img1" src="../../assets/image 2.svg" alt="">
+        <div>
+          <p class="text1" *ngIf="isExpanded">Sierra Ferguson</p>
+
+          <p class="text2" *ngIf="isExpanded">s.ferguson@gmail.com</p>
+        </div>
+
+
+      </mat-list-item>
+
+      <mat-list-item>
+        <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector0.svg" alt=""></mat-icon>
+        <h4 mat-line *ngIf="isExpanded" class="text3" routerLink="/Sidenav">Dash Board</h4>
+
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector1.svg" alt=""></mat-icon>
+        <h4 mat-line *ngIf="isExpanded" class="text4">Tasks</h4>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector2.svg" alt=""></mat-icon>
+        <h4 mat-line *ngIf="isExpanded" class="text4" routerLink="/Login">Email</h4>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector3.svg" alt=""></mat-icon>
+        <h4 mat-line *ngIf="isExpanded" class="text4" routerLink="/Contact" >Contacts</h4>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector4.svg" alt=""></mat-icon>
+        <h4 mat-line *ngIf="isExpanded" class="text4" routerLink="/Chat" >chat</h4>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector5.svg" alt=""></mat-icon>
+
+        <h4 mat-line *ngIf="isExpanded" class="text4">Deals</h4>
+      </mat-list-item>
+      <hr>
+      <mat-list-item>
+        <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector6.svg" alt=""></mat-icon>
+        <h4 mat-line *ngIf="isExpanded" class="text4" >Settings</h4>
+      </mat-list-item>
+      <mat-list-item class="btn">
+        <mat-icon class="maticon" mat-list-icon (click)="isExpanded = !isExpanded"><img src="../../assets/Subtract.svg"
+            alt=""></mat-icon>
+        <h6 *ngIf="isExpanded" class="text5" (click)="isExpanded = !isExpanded">Toggle sidebar</h6>
+      </mat-list-item>
+    </mat-nav-list>
+
+
+
+
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <mat-toolbar>
+
+      <mat-icon class="maticon1"><img src="../../assets/Vector7.svg" alt=""></mat-icon>
+
+      <span class="text6">Global Search</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="maticon1"><img src="../../assets/Vector8.svg" alt=""></mat-icon>
+
+      <mat-icon class="maticon1"></mat-icon>
+
+    </mat-toolbar>
+    <div class="row">
+      <div class="col">
+        <mat-card style="height: 104%;margin-left: 10%;margin-top: 5%;">
+          <p class="text7"> 8 task completed out of 10</p>
+          <p class="text8">Show: This week</p>
+          <img class="img2" src="../../assets/Polygon.svg" alt="">
+          <img class="img3" src="../../assets/Rectangle 5.svg" alt="">
+          <img class="img4" src="../../assets/Rectangle 5.1.svg" alt="">
+          <div class="row" style="padding-top: 5%;">
+            <p class="text9">23 December,Sunday</p>
+            <div class="row" style="padding-left: 3%;">
+              <div class="col">
+                <p class="text10">Sun</p>
+                <span class="dot">
+                  <p>23</p>
+                </span>
+              </div>
+              <div class="col">
+                <p style="color: #109CF1;">Mon</p>
+                <p style="color: #109CF1;">24</p>
+              </div>
+              <div class="col">
+                <p class="text10">Tue</p>
+                <p>25</p>
+              </div>
+              <div class="col">
+                <p class="text10"> Wed</p>
+                <p>25</p>
+              </div>
+              <div class="col">
+                <p class="text10"> Thu</p>
+                <p>26</p>
+              </div>
+              <div class="col">
+                <p class="text10"> Fri</p>
+                <p>27</p>
+              </div>
+              <div class="col">
+                <p class="text10"> Sat</p>
+                <p>28</p>
+              </div>
+            </div>
+            <div style="padding-left: 2%;">
+              <mat-card style="margin-top: 3%; ">
+                <div class="row">
+                  <div class="col">
+                    <span class="text11">Send benefit review by Sunday</span>
+                  </div>
+                  <div class="col">
+                    <span style="float: right;" class="text12">Remainder</span>
+                  </div>
+                  <div class="row" style="margin-top: 1%;">
+                    <p class="text13">Due date: <span style="color: #4C5862;">December 23,2021</span></p>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="row" style="margin-top: 10%;">
+                        <div class="col-2"><img class="img5" src="../../assets/image 3.svg" alt=""></div>
+                        <div class="col-2" style="color: #707683;">
+                          <p>George&nbsp;Fields</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <button style="float: right;margin-top: 10%; width: 30%;" type="button"
+                        class="btn1">Completed</button>
+                    </div>
+
+                  </div>
+
+                </div>
+              </mat-card>
+
+
+              <mat-card style="margin-top: 3%; ">
+                <div class="row">
+                  <div class="col">
+                    <span class="text11">Invite to office meet-up</span>
+                  </div>
+                  <div class="col">
+                    <span style="float: right;" class="text12">call</span>
+                  </div>
+                  <div class="row" style="margin-top: 1%;">
+                    <p class="text13">Due date: <span style="color: #4C5862;">December 23,2021</span></p>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="row" style="margin-top: 10%;">
+                        <div class="col-2"><img class="img5" src="../../assets/image 3 (1).svg" alt=""></div>
+                        <div class="col-2" style="color: #707683;">
+                          <p>Rebecca&nbsp;Moore</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="row" style="float: right;padding-left: 25%;">
+
+                        <div class="col-1" style="float: right;margin-top: 10%;"><img
+                            style="float: right;margin-top: 10%;" src="../../assets/Vector10.svg" alt=""></div>
+                        <div class="col-1" style="float: right;margin-top: 10%;"><img
+                            style="float: right;margin-top: 10%;" src="../../assets/Vector9.svg" alt=""></div>
+                        <div class="col-1" style="float: right;margin-top: 10%;"> <img
+                            style="float: right;margin-top: 10%;" src="../../assets/Ellipse (1).svg" alt=""></div>
+                        <div class="col-1" style="float: right;margin-top: 10%;"><img
+                            style="float: right;margin-top: 10%;" src="../../assets/Ellipse.svg" alt=""></div>
+                        <div class="col-1" style="float: right;margin-top: 10%;width: 50%; "><button
+                            style="float: right; background-color: red; width: 90%;" type="button"
+                            class="btn1">Ended</button></div>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </mat-card>
+
+
+              <mat-card style="margin-top: 3%; ">
+                <div class="row">
+                  <div class="col">
+                    <span class="text11">Office meet-up</span>
+                  </div>
+                  <div class="col">
+                    <span style="float: right;" class="text12">Event</span>
+                  </div>
+                  <div class="row" style="margin-top: 1%;">
+                    <p class="text13">Due date: <span style="color: #4C5862;">December 23,2021</span></p>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="row" style="margin-top: 10%;">
+                        <div class="col-2"><img class="img5" src="../../assets/image 3.svg" alt=""></div>
+                        <div class="col-2" style="color: #707683;">
+                          <p>Lindsey&nbsp;Stroud</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+
+                      <button style="float: right;margin-top: 10%;width: 30%;" type="button"
+                        class="btn1">Completed</button>
+                    </div>
+                  </div>
+                </div>
+              </mat-card>
+
+            </div>
+          </div>
+        </mat-card>
+      </div>
+      <div class="col">
+
+        <img style="margin-top: 3%; height: 60%; padding-left: 8%;" src="../../assets/deals_graphic.svg" alt="">
+
+
+
+
+
+        <div class="row">
+          <div class="col">
+            <img style="padding-left: 8%;" src="../../assets/tasks_chart.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-drawer-container>

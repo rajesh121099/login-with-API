@@ -1,0 +1,365 @@
+<mat-drawer-container class="example-container mat-typography" autosize>
+    <mat-drawer #drawer mode="side" disableClose="true" opened="true">
+
+        <mat-nav-list style="overflow-x: hidden; overflow-y: hidden;">
+            <mat-list-item>
+                <p *ngIf="!isExpanded" class="saas">SaaS</p>
+                <h4 mat-line *ngIf="isExpanded" class="saas">SaaS Kit</h4>
+            </mat-list-item>
+            <hr style="background: #b3b4b6; ">
+            <mat-list-item>
+                <img class="img1" src="../../assets/image 2.svg" alt="">
+                <div>
+                    <p class="text1" *ngIf="isExpanded">Sierra Ferguson</p>
+
+                    <p class="text2" *ngIf="isExpanded">s.ferguson@gmail.com</p>
+                </div>
+
+
+            </mat-list-item>
+
+            <mat-list-item>
+                <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector0.svg" alt=""></mat-icon>
+                <h4 mat-line *ngIf="isExpanded" class="text4" routerLink="/Sidenav">Dash Board</h4>
+
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector1.svg" alt=""></mat-icon>
+                <h4 mat-line *ngIf="isExpanded" class="text4">Tasks</h4>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector2.svg" alt=""></mat-icon>
+                <h4 mat-line *ngIf="isExpanded" class="text4" routerLink="/Login">Email</h4>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector3.svg" alt=""></mat-icon>
+                <h4 mat-line *ngIf="isExpanded" class="text4" routerLink="/Contact">Contacts</h4>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector4.svg" alt=""></mat-icon>
+                <h4 mat-line *ngIf="isExpanded" class="text4"  style="color: #109CF1;" routerLink="/Chat">chat</h4>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector5.svg" alt=""></mat-icon>
+
+                <h4 mat-line *ngIf="isExpanded" class="text4">Deals</h4>
+            </mat-list-item>
+            <hr style="background: #b3b4b6; ">
+            <mat-list-item>
+                <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector6.svg" alt=""></mat-icon>
+                <h4 mat-line *ngIf="isExpanded" class="text4"  >Settings</h4>
+            </mat-list-item>
+            <mat-list-item class="btn">
+                <mat-icon class="maticon" mat-list-icon (click)="isExpanded = !isExpanded"><img
+                        src="../../assets/Subtract.svg" alt=""></mat-icon>
+                <h6 *ngIf="isExpanded" class="text5" (click)="isExpanded = !isExpanded">Toggle sidebar</h6>
+            </mat-list-item>
+        </mat-nav-list>
+
+
+
+
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <mat-toolbar>
+            <mat-icon class="maticon1"><img src="../../assets/Vector7.svg" alt=""></mat-icon>
+            <span class="text6">Global Search</span>
+            <span class="example-spacer"></span>
+            <mat-icon class="maticon1"><img src="../../assets/Vector8.svg" alt=""></mat-icon>
+            <mat-icon class="maticon1"></mat-icon>
+        </mat-toolbar>
+        <div class="row">
+            <div class="col-4">
+                <div class="rectangle">
+                    <div class="row" style="margin-top: 5%;">
+                        <div class="col" style="margin-top: 5%; margin-left: 5%;">
+                            <div class="row">
+                                <div class="col-2"><img class="img2" src="../../assets/image.svg" alt=""></div>
+                                <div class="col"> <a href="" (click)="isRoute = !isRoute" class="text7">Lindsey
+                                        Stround</a></div>
+                            </div>
+                        </div>
+                        <div class="col-4" style="margin-top: 5%;">
+                            <small class="text8" style="float: right;">30 Dec 2021,12.00</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="margin-left:14%;">
+                            <p class="text9">Your idea for this application is nice</p>
+                        </div>
+                        <div class="col-2">
+                            <div class="square" style="float: right;">
+                                <p style="padding-left: 25%;">1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="background: #b3b4b6; ">
+                    <div class="row">
+                        <div class="col" style=" margin-left: 5%;">
+                            <div class="row">
+                                <div class="col-2"><img class="img2" src="../../assets/image 4.svg" alt=""></div>
+                                <div class="col"> <a href="" (click)="isRoute = !isRoute " class="text10">Nicci
+                                        Troiani</a></div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <small class="text8" style="float: right;">30 Dec 2021,12.00</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="margin-left:14%;">
+                            <p class="text11">nice is typing a message...</p>
+                        </div>
+                        <div class="col-2" style="float: right;">
+                            <div class="square" style="float: right;">
+                                <p style="padding-left: 25%;">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="background: #b3b4b6; ">
+                    <div class="row">
+                        <div class="col" style=" margin-left: 5%;">
+                            <div class="row">
+                                <div class="col-2"><img class="img2" src="../../assets/image.svg" alt=""></div>
+                                <div class="col"> <a href="" (click)="isRoute = !isRoute " class="text10">WordPress
+                                        conferesion</a></div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <small class="text8" style="float: right;">30 Dec 2021,12.00</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="margin-left:14%;">
+                            <p class="text9">You: Sure!</p>
+                        </div>
+                        <div class="col-2" style="float: right;">
+                            <div class="square1" style="float: right;">
+                                <p style="padding-left: 25%;"><img src="../../assets/Vector11.svg" alt=""></p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="background: #b3b4b6; ">
+                    <div class="row">
+                        <div class="col" style=" margin-left: 5%;">
+                            <div class="row">
+                                <div class="col-2"><img class="img2" src="../../assets/Vector (1).svg" alt=""></div>
+                                <div class="col"> <a href="" (click)="isRoute = !isRoute " class="text10">Rebecca Moore
+                                    </a></div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <small class="text8" style="float: right;">30 Dec 2021,12.00</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="margin-left:14%;">
+                            <p class="text9">You: application is nice</p>
+                        </div>
+                        <div class="col-2" style="float: right;">
+                            <div class="square2" style="float: right;">
+                                <p style="padding-left: 25%; color: red;">!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="background: #b3b4b6; ">
+                    <div class="row">
+                        <div class="col" style=" margin-left: 5%;">
+                            <div class="row">
+                                <div class="col-2"><img class="img2" src="../../assets/image 3 (2).svg" alt=""></div>
+                                <div class="col"> <a href="" (click)="isRoute = !isRoute " class="text10">jane Dane
+                                    </a></div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <small class="text8" style="float: right;">30 Dec 2021,12.00</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="margin-left:14%;">
+                            <p class="text9">You: idea for this app</p>
+                        </div>
+                        <div class="col-2" style="float: right;">
+                            <div class="square3" style="float: right;">
+                                <p style="padding-left: 25%;"><img src="../../assets/Vector12.svg" alt=""></p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="background: #b3b4b6; ">
+                    <div class="row">
+                        <div class="col" style=" margin-left: 5%;">
+                            <div class="row">
+                                <div class="col-2"><img class="img2" src="../../assets/image 3 (3).svg" alt=""></div>
+                                <div class="col"> <a href="" (click)="isRoute = !isRoute " class="text10">Jone Dermot
+                                    </a></div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <small class="text8" style="float: right;">30 Dec 2021,12.00</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="margin-left:14%;">
+                            <p class="text9">I have a new features for this project</p>
+                        </div>
+                        <div class="col-2" style="float: right;">
+
+                        </div>
+                    </div>
+                    <hr style="background: #b3b4b6; ">
+                    <div class="row">
+                        <div class="col" style=" margin-left: 5%;">
+                            <div class="row">
+                                <div class="col-2"><img class="img2" src="../../assets/image 11.svg" alt=""></div>
+                                <div class="col"> <a href="" (click)="isRoute = !isRoute " class="text10">Martin Merces
+                                    </a></div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <small class="text8" style="float: right;">30 Dec 2021,12.00</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="margin-left:14%;">
+                            <p class="text11">Martin is typing a message...</p>
+                        </div>
+                        <div class="col-2" style="float: right;">
+
+
+
+                        </div>
+                    </div>
+                    <hr style="background: #b3b4b6; ">
+                    <div class="row">
+                        <div class="col" style=" margin-left: 5%;">
+                            <div class="row">
+                                <div class="col-2"><img class="img2" src="../../assets/image 12.svg" alt=""></div>
+                                <div class="col"> <a href="" (click)="isRoute = !isRoute " class="text10">Franz
+                                        Ferdinand
+                                    </a></div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <small class="text8" style="float: right;">30 Dec 2021,12.00</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="margin-left:14%;">
+                            <p class="text9">Can we sechudule an online meeting?</p>
+                        </div>
+                        <div class="col-2" style="float: right;">
+
+
+
+                        </div>
+                    </div>
+                    <hr style="background: #b3b4b6; ">
+                    <div class="row">
+                        <div class="col" style=" margin-left: 5%;">
+                            <div class="row">
+                                <div class="col-2"><img class="img2" src="../../assets/image.svg" alt=""></div>
+                                <div class="col"> <a href="" (click)="isRoute = !isRoute " class="text10">Judith
+                                        Williams
+                                    </a></div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <small class="text8" style="float: right;">30 Dec 2021,12.00</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="margin-left:14%;">
+                            <p class="text9">It's fine</p>
+                        </div>
+                        <div class="col-2" style="float: right;">
+
+
+
+                        </div>
+                    </div>
+                    <hr style="background: #b3b4b6; ">
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="rectangle2">
+                    <div *ngIf="isRoute">
+                        <div class="row">
+                            <div class="col" style="margin-top: 2%; margin-left: 5%;">
+
+                                <span><img class="img2" src="../../assets/image.svg" alt=""></span>&nbsp;
+                                <span> <a href="" (click)="isRoute = !isRoute" class="text10">Lindsey
+                                        Stround</a></span>&nbsp;
+                                <span class="col-4"><img src="../../assets/Ellipse (2).svg" alt=""></span>
+
+                            </div>
+                            <div class="col" style="margin-top: 2%;">
+
+                                <img style="float: right;" src="../../assets/Vector13.svg" alt="">
+                            </div>
+                        </div>
+                        <hr style="background: #b3b4b6;">
+                    </div>
+                    <div class="row" style="margin-top: 8%; margin-left: 2%;">
+                        <div class="col">
+                            <span><img class="img2" src="../../assets/image.svg" alt=""></span>&nbsp;
+                            <span> <a href="" class="text13">Lindsey Stround</a></span>&nbsp;
+                            <span class=" text12">11.22</span>
+                            <div class="rectangle3" style="margin-top: 1%;">
+                                <p class="text14" style=" padding-left:4%; padding-top:5%">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                    Eaque, nisi at quae voluptatum voluptatibus explicabo, possimus non cum aliquam, earum iste eum repellendus
+                                     accusantium laboriosam officiis id ad. Quo, tenetur!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" >
+                            <span style="float:right;padding-left:1%" class="text12">11.22</span>
+                            <span style="float:right;padding-left:1%"> <a href="" class="text13">Lindsey Stround</a></span>
+                            <span style="float:right;padding-left:1%"><img class="img2" src="../../assets/image.svg" alt=""></span><br><br>
+                            <div class="rectangle4" style="float:right;">
+                                <p class="text15" style=" padding-left:4%; padding-top:5%">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                    Eaque, nisi at quae voluptatum voluptatibus explicabo, possimus non cum aliquam, earum iste eum repellendus
+                                     accusantium laboriosam officiis id ad. Quo, tenetur!</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 4%; margin-left: 2%;">
+                        <div class="col">
+                            <span><img class="img2" src="../../assets/image.svg" alt=""></span>&nbsp;
+                            <span> <a href="" class="text13">Lindsey Stround</a></span>&nbsp;
+                            <span class=" text12">11.22</span>
+                            <div class="rectangle5" style="margin-top: 1%;">
+                                <p class="text14" style=" padding-left:4%; padding-top:5%">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                  officiis id ad. Quo, tenetur!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 4%; margin-left: 2%;">
+                        <div class="col">
+                            <span><img class="img2" src="../../assets/image.svg" alt=""></span>&nbsp;
+                            <span> <a href="" class="text13">Lindsey Stround</a></span>&nbsp;
+                            <span class=" text12">Typing message....</span>
+                        </div>
+                    </div>
+                    <hr style="background: #b3b4b6; ">
+                    <div class="row">
+                        <div class="col">
+                            <p class="text16"> Type a Message...</p>
+                        </div>
+                        <div class="col">
+                            <span style="float: right;padding-left:1%; padding-top: 1%;"><i class="fa fa-smile-o" aria-hidden="true"></i></span>
+                            <span style="float: right;padding-left:1%; padding-top: 1%; color: #C2CFE0;;"><img src="../../assets/paperclip.svg" alt=""></span>
+                           <div style="padding-left: 1%;"> <span style="float: right;" class="rec"></span></div>
+                           
+                         
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-drawer-container>

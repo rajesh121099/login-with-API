@@ -1,0 +1,247 @@
+<mat-drawer-container class="example-container mat-typography" autosize>
+    <mat-drawer #drawer mode="side" disableClose="true" opened="true">
+
+        <mat-nav-list style="overflow-x: hidden; overflow-y: hidden;">
+            <mat-list-item>
+                <p *ngIf="!isExpanded" class="saas">SaaS</p>
+                <h4 mat-line *ngIf="isExpanded" class="saas">SaaS Kit</h4>
+            </mat-list-item>
+            <hr style="background: #b3b4b6; ">
+            <mat-list-item>
+                <img class="img1" src="../../assets/image 2.svg" alt="">
+                <div>
+                    <p class="text1" *ngIf="isExpanded">Sierra Ferguson</p>
+
+                    <p class="text2" *ngIf="isExpanded">s.ferguson@gmail.com</p>
+                </div>
+
+
+            </mat-list-item>
+
+            <mat-list-item>
+                <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector0.svg" alt=""></mat-icon>
+                <h4 mat-line *ngIf="isExpanded" class="text4"  routerLink="/Sidenav">Dash Board</h4>
+
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector1.svg" alt=""></mat-icon>
+                <h4 mat-line *ngIf="isExpanded" class="text4">Tasks</h4>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector2.svg" alt=""></mat-icon>
+                <h4 mat-line *ngIf="isExpanded" class="text4" routerLink="/Login">Email</h4>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector3.svg" alt=""></mat-icon>
+                <h4 mat-line *ngIf="isExpanded" class="text4"  style="color: #109CF1;" routerLink="/Contact">Contacts</h4>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector4.svg" alt=""></mat-icon>
+                <h4 mat-line *ngIf="isExpanded" class="text4"routerLink="/Chat">chat</h4>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector5.svg" alt=""></mat-icon>
+
+                <h4 mat-line *ngIf="isExpanded" class="text4">Deals</h4>
+            </mat-list-item>
+            <hr style="background: #b3b4b6; ">
+            <mat-list-item>
+                <mat-icon class="maticon" mat-list-icon><img src="../../assets/Vector6.svg" alt=""></mat-icon>
+                <h4 mat-line *ngIf="isExpanded" class="text4">Settings</h4>
+            </mat-list-item>
+            <mat-list-item class="btn">
+                <mat-icon class="maticon" mat-list-icon (click)="isExpanded = !isExpanded"><img
+                        src="../../assets/Subtract.svg" alt=""></mat-icon>
+                <h6 *ngIf="isExpanded" class="text5" (click)="isExpanded = !isExpanded">Toggle sidebar</h6>
+            </mat-list-item>
+        </mat-nav-list>
+
+
+
+
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <mat-toolbar>
+            <mat-icon class="maticon1"><img src="../../assets/Vector7.svg" alt=""></mat-icon>
+            <span class="text6">Search for a contact</span>
+            <span class="example-spacer"></span>
+            <mat-icon class="maticon1"><img src="../../assets/Vector8.svg" alt=""></mat-icon>
+            <mat-icon class="maticon1"></mat-icon>
+        </mat-toolbar>
+
+        <div style="margin-top: 5%;margin-left: 5%; margin-right: 5%;">
+            <div class="row">
+                <div class="col">
+                    <p class="txt3">company: <span class="txt4">All</span> </p>
+                </div>
+                <div class="col">
+                    <button type="button" class="button" style="float: right;  margin-right: 15%;">Add contact</button>
+                </div>
+            </div>
+            <table class="table table-light" style="margin-top: 2%;">
+                <tbody>
+
+                    <tr>
+                        <td scope="row" style="padding-top: 2%; padding-left: 1%;"><input type="checkbox" /></td>
+                        <th class="txt5">Name  </th>
+                        <th class="txt5">Email</th>
+                        <th class="txt5">Company name</th>
+                        <th class="txt5">Role</th>
+                        <th class="txt5">Forecast</th>
+                        <th class="txt5">Recent activity</th>
+                    </tr>
+                    <tr>
+                        <td scope="row" style="padding-top: 2%; padding-left: 1%;"><input type="checkbox" /></td>
+                        <td>
+                            <div class="row">
+                                <div class="col">
+                                    <span><img class="img2" src="../../assets/image.svg" alt=""></span>&nbsp;
+                                    <span> <a href="" class="txt">Lindsey Stround</a></span>&nbsp;
+
+
+                                </div>
+                            </div>
+                        </td>
+                        <td class="txt1">lindsey.stroud@gmail.com</td>
+                        <td class="txt1">Hatchbuck</td>
+                        <td class="txt1">Manager</td>
+                        <td class="txt1">50%</td>
+                        <td class="txt1">5 Minutes ago</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" style="padding-top: 2%; padding-left: 1%;"><input type="checkbox" /></td>
+                        <td>
+                            <div class="row">
+                                <div class="col">
+                                    <span><img class="img2" src="../../assets/image 4.svg" alt=""></span>&nbsp;
+                                    <span> <a href="" class="txt">Nicci Troiani</a></span>&nbsp;
+                                </div>
+                            </div>
+                        </td>
+                        <td class="txt1">nicci.troiani@gmail.com</td>
+                        <td class="txt1">Slack</td>
+                        <td class="txt1">Manager</td>
+                        <td class="txt1">75%</td>
+                        <td class="txt1">14 Minutes ago</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" style="padding-top: 2%; padding-left: 1%;"><input type="checkbox" /></td>
+                        <td>
+                            <div class="row">
+                                <div class="col">
+                                    <span><img class="img2" src="../../assets/image 3 (2).svg" alt=""></span>&nbsp;
+                                    <span> <a href="" class="txt">George Field</a></span>&nbsp;
+                                </div>
+                            </div>
+                        </td>
+                        <td class="txt1">george field@gmail.com</td>
+                        <td class="txt1">Clockify</td>
+                        <td class="txt1">CEO</td>
+                        <td class="txt1">10%</td>
+                        <td class="txt1">6 Hours ago</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" style="padding-top: 2%; padding-left: 1%;"><input type="checkbox" /></td>
+                        <td>
+                            <div class="row">
+                                <div class="col">
+                                    <span><img class="img2" src="../../assets/image 3 (3).svg" alt=""></span>&nbsp;
+                                    <span> <a href="" class="txt">Rebecca Moore</a></span>&nbsp;
+                                </div>
+                            </div>
+                        </td>
+                        <td class="txt1">rebecca.moore@gmail.com</td>
+                        <td class="txt1">Upwork</td>
+                        <td class="txt1">Manager</td>
+                        <td class="txt1">25%</td>
+                        <td class="txt1">Oct 12,2021</td>
+                    </tr>
+                    <!-- dgf -->
+                    <tr>
+                        <td scope="row" style="padding-top: 2%; padding-left: 1%;"><input type="checkbox" /></td>
+                        <td>
+                            <div class="row">
+                                <div class="col">
+                                    <span><img class="img2" src="../../assets/image 11.svg" alt=""></span>&nbsp;
+                                    <span> <a href="" class="txt">Lindsey Stround</a></span>&nbsp;
+                                </div>
+                            </div>
+                        </td>
+                        <td class="txt1">lindsey.stroud@gmail.com</td>
+                        <td class="txt1">Hatchbuck</td>
+                        <td class="txt1">Manager</td>
+                        <td class="txt1">50%</td>
+                        <td class="txt1">5 Minutes ago</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" style="padding-top: 2%; padding-left: 1%;"><input type="checkbox" /></td>
+                        <td>
+                            <div class="row">
+                                <div class="col">
+                                    <span><img class="img2" src="../../assets/image 12.svg" alt=""></span>&nbsp;
+                                    <span> <a href="" class="txt">Nicci Troiani</a></span>&nbsp;
+                                </div>
+                            </div>
+                        </td>
+                        <td class="txt1">nicci.troiani@gmail.com</td>
+                        <td class="txt1">Slack</td>
+                        <td class="txt1">Manager</td>
+                        <td class="txt1">75%</td>
+                        <td class="txt1">14 Minutes ago</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" style="padding-top: 2%; padding-left: 1%;"><input type="checkbox" /></td>
+                        <td>
+                            <div class="row">
+                                <div class="col">
+                                    <span><img class="img2" src="../../assets/image.svg" alt=""></span>&nbsp;
+                                    <span> <a href="" class="txt">George Field</a></span>&nbsp;
+                                </div>
+                            </div>
+                        </td>
+                        <td class="txt1">george field@gmail.com</td>
+                        <td class="txt1">Clockify</td>
+                        <td class="txt1">CEO</td>
+                        <td class="txt1">10%</td>
+                        <td class="txt1">6 Hours ago</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" style="padding-top: 2%; padding-left: 1%;"><input type="checkbox" /></td>
+                        <td>
+                            <div class="row">
+                                <div class="col">
+                                    <span><img class="img2" src="../../assets/image.svg" alt=""></span>&nbsp;
+                                    <span> <a href="" class="txt">Rebecca Moore</a></span>&nbsp;
+                                </div>
+                            </div>
+                        </td>
+                        <td class="txt1">rebecca.moore@gmail.com</td>
+                        <td class="txt1">Upwork</td>
+                        <td class="txt1">Manager</td>
+                        <td class="txt1">25%</td>
+                        <td class="txt1">Oct 12,2021</td>
+                    </tr>
+                    <tr>
+                        <td scope="row" style="padding-top: 2%; padding-left: 1%;"><input type="checkbox" /></td>
+                        <td>
+                            <div class="row">
+                                <div class="col">
+                                    <span><img class="img2" src="../../assets/image 3 (3).svg" alt=""></span>&nbsp;
+                                    <span> <a href="" class="txt">Rebecca Moore</a></span>&nbsp;
+                                </div>
+                            </div>
+                        </td>
+                        <td class="txt1">rebecca.moore@gmail.com</td>
+                        <td class="txt1">Upwork</td>
+                        <td class="txt1">Manager</td>
+                        <td class="txt1">25%</td>
+                        <td class="txt1">Oct 12,2021</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+</mat-drawer-container>

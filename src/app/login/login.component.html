@@ -1,0 +1,67 @@
+<div  class="bg-img">
+    <div class="pad"> 
+      <mat-card class="card">
+     <div> <h1><strong style="padding-left: 35%;">Login</strong></h1>
+        <small style="padding-left: 25%;">Login into your pages account</small></div><br><br>
+       <mat-form-field appearance="outline">
+         <mat-label >Email</mat-label>
+         <input  matInput placeholder="Email"  type="email">
+       </mat-form-field>
+       <br>
+       <mat-form-field appearance="outline">
+         <mat-label>password</mat-label>
+         <input matInput placeholder="password"  type="password">
+       </mat-form-field><br>
+       <div class="row">
+         <div class="col">
+           <mat-checkbox  [(ngModel)]="checked">keep me logged in</mat-checkbox>
+         </div>
+         <div class="col">
+           <a routerLink="/Forget"  class="forget"><small>Forgetpassword?</small></a>
+         </div>
+       </div><br>
+       <button mat-flat-button class="button1" routerLink="/Sidenav">Log In</button>
+       <br><br>
+       <div style="margin-right: 20%;">
+        <div class="row" style="padding-left: 10%;">
+   <div class="col">
+     <hr style="width: 90px;"></div>
+     <div class="col">
+       Or login with  </div>
+     <div class="col">
+       <hr style="width: 100px;"> </div>
+       </div></div>
+       <div style="margin-right: 10%;">
+      <div class="row">
+        <div class="col">
+         <button mat-button style="background-color: red; color: white;">
+            <i class="fa fa-google"></i>&nbsp;
+           google+
+         </button>
+        </div>
+        <div class="col">
+         <button mat-button style="background-color:#1DA1F2; color: white;">
+            <i class="fa fa-twitter"></i>&nbsp;
+           twitter
+         </button>
+        </div>
+        <div class="col">
+         <button mat-button style="background-color:#4267B2;color: white;">
+            <i class="fa fa-facebook"></i> &nbsp;
+          facebook
+         </button>
+        </div>
+      </div></div>
+      <br><br>
+      <small style="padding-left: 20%;">Do not have a account?<a routerLink="/Register" class="forget">Siginup</a></small><br><br>
+     </mat-card>
+   </div>
+   </div>
+   
+   
+   
+   
+   
+   
+   
+   
