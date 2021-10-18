@@ -22,11 +22,13 @@ import { RegisterComponent } from './register/register.component';
 import { ForgetComponent } from './forget/forget.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input'
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, ActivatedRoute } from '@angular/router';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MatSelectModule}  from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { AuthGuard } from './services/auth.guard';
 
 
 @NgModule({
@@ -38,11 +40,12 @@ import { HttpClientModule } from '@angular/common/http';
     Contact1Component,
     LoginComponent,
     RegisterComponent,
-    ForgetComponent
+    ForgetComponent,
+    ChangepasswordComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, FormsModule,RouterModule,MatTabsModule,MatSelectModule,HttpClientModule,
+    AppRoutingModule, FormsModule,RouterModule,MatTabsModule,MatSelectModule,HttpClientModule,ReactiveFormsModule,
     BrowserAnimationsModule,MatCardModule,MatSidenavModule,MatInputModule, LayoutModule, MatToolbarModule, MatButtonModule, MatIconModule, MatListModule,MatTableModule,MatCheckboxModule,MatFormFieldModule,
     RouterModule.forRoot([
       {path:'',component:LoginComponent},
@@ -53,9 +56,10 @@ import { HttpClientModule } from '@angular/common/http';
         {path:'Chat',component:ChatComponent},
         {path:'Contact',component:ContactComponent},
         {path:'Contact1',component:Contact1Component},
+        {path:'changepassword',component: ChangepasswordComponent,canActivate: [AuthGuard]},
     ])
   ],
-  providers: [],
+  providers: [AuthGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -23,4 +23,13 @@ export class RegisterComponent implements OnInit {
      this.customer=new Classuser;
     })
   }
-}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ }
+

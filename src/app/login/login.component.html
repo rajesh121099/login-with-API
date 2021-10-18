@@ -5,12 +5,12 @@
         <small style="padding-left: 25%;">Login into your pages account</small></div><br><br>
        <mat-form-field appearance="outline">
          <mat-label >Email</mat-label>
-         <input  matInput placeholder="Email"  type="email">
+         <input  matInput placeholder="Email"  [(ngModel)]="customer.username" type="email">
        </mat-form-field>
        <br>
        <mat-form-field appearance="outline">
          <mat-label>password</mat-label>
-         <input matInput placeholder="password"  type="password">
+         <input matInput placeholder="password"  [(ngModel)]="customer.password" type="password">
        </mat-form-field><br>
        <div class="row">
          <div class="col">
@@ -20,7 +20,7 @@
            <a routerLink="/Forget"  class="forget"><small>Forgetpassword?</small></a>
          </div>
        </div><br>
-       <button mat-flat-button class="button1" routerLink="/Sidenav">Log In</button>
+       <button mat-flat-button class="button1" (click)="logincustomer()">Log In</button>
        <br><br>
        <div style="margin-right: 20%;">
         <div class="row" style="padding-left: 10%;">
