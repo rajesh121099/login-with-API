@@ -26,9 +26,10 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, ActivatedRoute } from '@angular/router';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MatSelectModule}  from '@angular/material/select';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { AuthGuard } from './services/auth.guard';
+import { TokenInterceptorService } from './token-interceptor.service';
 
 
 @NgModule({
@@ -49,17 +50,19 @@ import { AuthGuard } from './services/auth.guard';
     BrowserAnimationsModule,MatCardModule,MatSidenavModule,MatInputModule, LayoutModule, MatToolbarModule, MatButtonModule, MatIconModule, MatListModule,MatTableModule,MatCheckboxModule,MatFormFieldModule,
     RouterModule.forRoot([
       {path:'',component:LoginComponent},
-        {path:'Login',component:LoginComponent},
+     
         {path:'Register',component:RegisterComponent},
-        {path:'Sidenav',component:SidenavComponent},
+        {path:':userId/Sidenav', canActivate: [AuthGuard],component:SidenavComponent},
         {path:'Forget',component:ForgetComponent},
         {path:'Chat',component:ChatComponent},
         {path:'Contact',component:ContactComponent},
         {path:'Contact1',component:Contact1Component},
-        {path:'changepassword',component: ChangepasswordComponent,canActivate: [AuthGuard]},
+        {path:'changepassword',component: ChangepasswordComponent},
+        { path: '**', redirectTo: 'Login' }
+        
     ])
   ],
-  providers: [AuthGuard ],
+  providers: [ { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

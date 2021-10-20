@@ -7,18 +7,21 @@ import { UsersService } from '../users-service.service';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  UsersService: any;
+
+
   constructor(
-  public createuser:UsersService,
-  private _router: Router) { }
-canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): boolean | Promise<boolean> {
-    var isAuthenticated = this.UsersService.getAuthStatus();
-    if (!isAuthenticated) {
-        this._router.navigate(['/Login']);
+    public createuser: UsersService,
+    private _router: Router) { }
+
+  canActivate(): boolean {
+    if (this.createuser.loggedIn()) {
+      return true
     }
-    return isAuthenticated;
-}
-   
+    else {
+      this._router.navigate(['/Login'])
+      return false
+    }
+  }
+
+ 
 }
