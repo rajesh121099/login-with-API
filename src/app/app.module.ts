@@ -49,7 +49,7 @@ import { TokenInterceptorService } from './token-interceptor.service';
     AppRoutingModule, FormsModule,RouterModule,MatTabsModule,MatSelectModule,HttpClientModule,ReactiveFormsModule,
     BrowserAnimationsModule,MatCardModule,MatSidenavModule,MatInputModule, LayoutModule, MatToolbarModule, MatButtonModule, MatIconModule, MatListModule,MatTableModule,MatCheckboxModule,MatFormFieldModule,
     RouterModule.forRoot([
-      {path:'',component:LoginComponent},
+      {path:'Login',component:LoginComponent},
      
         {path:'Register',component:RegisterComponent},
         {path:':userId/Sidenav', canActivate: [AuthGuard],component:SidenavComponent},
