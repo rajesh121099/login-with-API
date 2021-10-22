@@ -29,6 +29,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { AuthGuard } from './services/auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
+import {MatDialogModule} from '@angular/material/dialog';
+import { LogoutComponent } from './logout/logout.component';
+import { MessageComponent } from './message/message.component';
 
 
 @NgModule({
@@ -41,22 +44,25 @@ import { TokenInterceptorService } from './token-interceptor.service';
     LoginComponent,
     RegisterComponent,
     ForgetComponent,
-    ChangepasswordComponent
+    ChangepasswordComponent,
+    LogoutComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, FormsModule,RouterModule,MatTabsModule,MatSelectModule,HttpClientModule,ReactiveFormsModule,
+    AppRoutingModule, FormsModule,RouterModule,MatTabsModule,MatSelectModule,HttpClientModule,ReactiveFormsModule,MatDialogModule,
     BrowserAnimationsModule,MatCardModule,MatSidenavModule,MatInputModule, LayoutModule, MatToolbarModule, MatButtonModule, MatIconModule, MatListModule,MatTableModule,MatCheckboxModule,MatFormFieldModule,
     RouterModule.forRoot([
       {path:'Login',component:LoginComponent},
      
-        {path:'Register',component:RegisterComponent},
+        {path:'Register',canActivate: [AuthGuard],component:RegisterComponent},
         {path:':userId/Sidenav', canActivate: [AuthGuard],component:SidenavComponent},
-        {path:'Forget',component:ForgetComponent},
-        {path:'Chat',component:ChatComponent},
-        {path:'Contact',component:ContactComponent},
-        {path:'Contact1',component:Contact1Component},
-        {path:'changepassword',component: ChangepasswordComponent},
+        {path:'Forget',canActivate: [AuthGuard],component:ForgetComponent},
+        {path:'Chat',canActivate: [AuthGuard],component:ChatComponent},
+        {path:'Contact',canActivate: [AuthGuard],component:ContactComponent},
+        {path:'Contact1',canActivate: [AuthGuard],component:Contact1Component},
+        {path:'changepassword',canActivate: [AuthGuard],component: ChangepasswordComponent},
+        {path:'message',canActivate: [AuthGuard],component: MessageComponent},
         { path: '**', redirectTo: 'Login' }
         
     ])

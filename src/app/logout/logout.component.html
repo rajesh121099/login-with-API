@@ -1,0 +1,16 @@
+
+<mat-dialog-content class="mat-typography">
+
+     <h1> Are sure to logout</h1>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button mat-dialog-close  (click)="authServiceAK.logoutUser()">Logout</button>
+</mat-dialog-actions> 
+<!--  -->
+<!-- <h2 mat-dialog-title>Are you sure you want to logout?</h2> -->
+<!-- <mat-dialog-content>You will be logged out due to inactivity</mat-dialog-content> -->
+<!-- <mat-dialog-actions> -->
+    <!-- <button mat-button mat-dialog-close (click)="authServiceAK.logoutUser()">Yes</button> -->
+    <!-- <button mat-button mat-dialog-close>No</button> -->
+<!-- </mat-dialog-actions> -->

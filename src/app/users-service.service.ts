@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, observable } from 'rxjs';
 import { Classuser } from './classuser';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,7 +14,7 @@ export class UsersService {
   
  
 
-  constructor( private http: HttpClient) { }
+  constructor( private http: HttpClient, private _router: Router) { }
   addCustomer(customer:Classuser):Observable<Classuser>{
     const body=JSON.stringify(customer);
     console.log(body)
@@ -45,5 +46,16 @@ export class UsersService {
   }
   getUserToken() {
     return localStorage.getItem('userToken')
+  }
+
+  removeUserToken() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('userToken');
+   // this.socialAuthService.signOut();
+  }
+
+  logoutUser() {
+    this.removeUserToken();
+    this._router.navigate(['/message'])
   }
 }
