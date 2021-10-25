@@ -60,7 +60,7 @@ const googleLoginOptions = {
     MessageComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,    SocialLoginModule,
     AppRoutingModule, FormsModule,RouterModule,MatTabsModule,MatSelectModule,HttpClientModule,ReactiveFormsModule,MatDialogModule,
     BrowserAnimationsModule,MatCardModule,MatSidenavModule,MatInputModule, LayoutModule, MatToolbarModule, MatButtonModule, MatIconModule, MatListModule,MatTableModule,MatCheckboxModule,MatFormFieldModule,
     RouterModule.forRoot([
@@ -87,7 +87,7 @@ const googleLoginOptions = {
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              '814985497024-6o8eqc4t2gad22hbdq4akn2ani4aukc3.apps.googleusercontent.com', googleLoginOptions
+              '574316266130-f6ila19i8htdr87v2mq62fpoegd6q570.apps.googleusercontent.com', googleLoginOptions
             )
           },
           {

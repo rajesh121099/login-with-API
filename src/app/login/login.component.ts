@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit(): void {
+    
   }
   loginCustomer() {
     if ((this.customer.username == '' && this.customer.password == '') || (this.customer.username == '') || (this.customer.password == '')) {
@@ -55,6 +56,25 @@ export class LoginComponent implements OnInit {
      
     })
   }
+  } signInWithGoogle(): void {
+    this._auth.signInWithGoogle().then(googleResponse => {
+      const socialUsr  = {
+        firstName: googleResponse.firstName,
+        lastName: googleResponse.lastName,
+        email: googleResponse.email,
+        socialLogin: 'google'
+      }
+      this._auth.registerSocialUser(socialUsr ).subscribe(res => {
+       if (res.status == 'User not registered with Social Media') {
+          //this.toastr.error('Login Attempt Failed', 'User is not registered through Google.');
+        } else {
+          this.setUserToken(res);
+        }
+      })
+   })
+   //.catch(err => {
+    //  console.log(err)
+    ;
   }
 
   signInWithFB(): void {
@@ -105,6 +125,40 @@ export class LoginComponent implements OnInit {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
 
 
 

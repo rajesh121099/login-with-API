@@ -4,7 +4,7 @@ import { Observable, observable } from 'rxjs';
 import { Classuser } from './classuser';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
-import { FacebookLoginProvider, SocialUser,SocialAuthService } from 'angularx-social-login';
+import { FacebookLoginProvider, SocialUser,SocialAuthService, GoogleLoginProvider } from 'angularx-social-login';
 @Injectable({
   providedIn: 'root'
 })
@@ -58,6 +58,9 @@ export class UsersService {
    // this.socialAuthService.signOut();
   }
 
+  signInWithGoogle(): Promise<SocialUser> {
+    return this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID);
+  }
   logoutUser() {
     this.removeUserToken();
     this._router.navigate(['/message']);
