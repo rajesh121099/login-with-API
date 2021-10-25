@@ -32,8 +32,19 @@ import { TokenInterceptorService } from './token-interceptor.service';
 import {MatDialogModule} from '@angular/material/dialog';
 import { LogoutComponent } from './logout/logout.component';
 import { MessageComponent } from './message/message.component';
+import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
 
+const fbLoginOptions = {
+  scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
+  //scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list',
+  return_scopes: true,
+  enable_profile_selector: true,
+  version: "v2.11" // this line added.
+};
 
+const googleLoginOptions = {
+  scope: 'profile email'
+};
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,8 +64,8 @@ import { MessageComponent } from './message/message.component';
     AppRoutingModule, FormsModule,RouterModule,MatTabsModule,MatSelectModule,HttpClientModule,ReactiveFormsModule,MatDialogModule,
     BrowserAnimationsModule,MatCardModule,MatSidenavModule,MatInputModule, LayoutModule, MatToolbarModule, MatButtonModule, MatIconModule, MatListModule,MatTableModule,MatCheckboxModule,MatFormFieldModule,
     RouterModule.forRoot([
-      {path:'Login',component:LoginComponent},
-     
+     {path:'Login',component:LoginComponent},
+     {path:'message',component: MessageComponent },
         {path:'Register',canActivate: [AuthGuard],component:RegisterComponent},
         {path:':userId/Sidenav', canActivate: [AuthGuard],component:SidenavComponent},
         {path:'Forget',canActivate: [AuthGuard],component:ForgetComponent},
@@ -62,12 +73,30 @@ import { MessageComponent } from './message/message.component';
         {path:'Contact',canActivate: [AuthGuard],component:ContactComponent},
         {path:'Contact1',canActivate: [AuthGuard],component:Contact1Component},
         {path:'changepassword',canActivate: [AuthGuard],component: ChangepasswordComponent},
-        {path:'message',canActivate: [AuthGuard],component: MessageComponent},
-        { path: '**', redirectTo: 'Login' }
+      
+       { path: '**', redirectTo: 'Login' }
         
     ])
   ],
-  providers: [ { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true } ],
+  providers: [ { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true },
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '814985497024-6o8eqc4t2gad22hbdq4akn2ani4aukc3.apps.googleusercontent.com', googleLoginOptions
+            )
+          },
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider('125112632754235', fbLoginOptions)
+          }
+        ]
+      } as SocialAuthServiceConfig,
+    }, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

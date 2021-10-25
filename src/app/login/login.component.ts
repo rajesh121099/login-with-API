@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   constructor(
     public createuser: UsersService,
     public profileService: ProfileService,
-    private _router: Router,
+    private _router: Router,private _auth: UsersService,
     
   ) { this.login = new FormGroup({
     username: new FormControl('', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
@@ -57,7 +57,24 @@ export class LoginComponent implements OnInit {
   }
   }
 
-
+  signInWithFB(): void {
+    this._auth.signInWithFB().then(fbResponse => {
+      console.log(fbResponse);
+      const socialUsr = {
+        firstName: fbResponse.firstName,
+        lastName: fbResponse.lastName,
+        email: fbResponse.email,
+        socialLogin: 'facebook'
+      }
+      this._auth.registerSocialUser(socialUsr).subscribe(res => {
+        if (res.status == 'User not registered with Social Media') {
+        //  this.toastr.error('Login Attempt Failed', 'User is not registered through Facebook.');
+        } else {
+          this.setUserToken(res);
+        }
+      })
+    });
+  }
 
 
 
