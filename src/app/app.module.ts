@@ -33,7 +33,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { LogoutComponent } from './logout/logout.component';
 import { MessageComponent } from './message/message.component';
 import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
-
+import { NewtemplateComponent } from './newtemplate/newtemplate.component';
+import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatSliderModule} from '@angular/material/slider';
 const fbLoginOptions = {
   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
   //scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list',
@@ -57,18 +59,19 @@ const googleLoginOptions = {
     ForgetComponent,
     ChangepasswordComponent,
     LogoutComponent,
-    MessageComponent
+    MessageComponent,
+    NewtemplateComponent
   ],
   imports: [
-    BrowserModule,    SocialLoginModule,
+    BrowserModule,    SocialLoginModule,NgbModalModule, NgbModule,MatSliderModule,
     AppRoutingModule, FormsModule,RouterModule,MatTabsModule,MatSelectModule,HttpClientModule,ReactiveFormsModule,MatDialogModule,
     BrowserAnimationsModule,MatCardModule,MatSidenavModule,MatInputModule, LayoutModule, MatToolbarModule, MatButtonModule, MatIconModule, MatListModule,MatTableModule,MatCheckboxModule,MatFormFieldModule,
     RouterModule.forRoot([
      {path:'Login',component:LoginComponent},
      {path:'message',component: MessageComponent },
-        {path:'Register',canActivate: [AuthGuard],component:RegisterComponent},
+        {path:'Register',component:RegisterComponent},
         {path:':userId/Sidenav', canActivate: [AuthGuard],component:SidenavComponent},
-        {path:'Forget',canActivate: [AuthGuard],component:ForgetComponent},
+        {path:'Forget',component:ForgetComponent},
         {path:'Chat',canActivate: [AuthGuard],component:ChatComponent},
         {path:'Contact',canActivate: [AuthGuard],component:ContactComponent},
         {path:'Contact1',canActivate: [AuthGuard],component:Contact1Component},
