@@ -1,0 +1,59 @@
+.white{
+  margin-top: 10rem !important;
+  display: block;
+}
+.row-scrollbar{
+  max-height: calc(100vh - 239px);
+  overflow-y: auto;
+}
+
+
+.matTable {
+  width: 100%;
+}
+.uploadedImage
+{
+  margin-left: 30px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.col-sm-12 .ul .li
+{
+  list-style: none;
+  float: left;
+}
+ 
+   
+   
+.col-sm-12 .ul .li.figure .caption{
+  border-top: 1px solid #DADBDB; 
+  background-color: white;
+  width: 220px; 
+  color: black; 
+  padding: 10px;
+  cursor: pointer;
+}
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
