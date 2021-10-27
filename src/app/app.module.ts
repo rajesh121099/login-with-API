@@ -36,6 +36,7 @@ import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthServiceConfig, So
 import { NewtemplateComponent } from './newtemplate/newtemplate.component';
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatSliderModule} from '@angular/material/slider';
+//import { NgxBootstrapSliderModule } from 'ngx-bootstrap-slider';
 const fbLoginOptions = {
   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
   //scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list',
@@ -63,7 +64,7 @@ const googleLoginOptions = {
     NewtemplateComponent
   ],
   imports: [
-    BrowserModule,    SocialLoginModule,NgbModalModule, NgbModule,MatSliderModule,
+    BrowserModule,    SocialLoginModule,NgbModalModule, NgbModule,MatSliderModule,NgxBootstrapSliderModule,
     AppRoutingModule, FormsModule,RouterModule,MatTabsModule,MatSelectModule,HttpClientModule,ReactiveFormsModule,MatDialogModule,
     BrowserAnimationsModule,MatCardModule,MatSidenavModule,MatInputModule, LayoutModule, MatToolbarModule, MatButtonModule, MatIconModule, MatListModule,MatTableModule,MatCheckboxModule,MatFormFieldModule,
     RouterModule.forRoot([
