@@ -43,13 +43,13 @@ export class ContentLibraryService {
     );
   }
 
- // uploadTwitterMedia(bodyObj: any) {
- //   return this.http.post<any>(`${environment.contentManagement}/uploadTwitterMedia`, bodyObj);
- // }
+ uploadTwitterMedia(bodyObj: any) {
+    return this.http.post<any>(`${environment.contentManagement}/uploadTwitterMedia`, bodyObj);
+ }
 
- // removeMedia(mediaKey: string[]) {
- //   return this.http.post<any>(`${environment.contentManagement}/removeMedia`, {mediaKey});
- // }
+ removeMedia(mediaKey: string[]) {
+   return this.http.post<any>(`${environment.contentManagement}/removeMedia`, {mediaKey});
+  }
 
 }
 

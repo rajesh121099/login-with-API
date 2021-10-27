@@ -33,10 +33,14 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { LogoutComponent } from './logout/logout.component';
 import { MessageComponent } from './message/message.component';
 import { FacebookLoginProvider, GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
-import { NewtemplateComponent } from './newtemplate/newtemplate.component';
+//import { NewtemplateComponent } from './newtemplate/newtemplate.component';
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatSliderModule} from '@angular/material/slider';
+import { LibraryComponent } from './library/library.component';
 //import { NgxBootstrapSliderModule } from 'ngx-bootstrap-slider';
+import { LightboxModule } from 'ngx-lightbox';
+import { MatSortModule } from '@angular/material/sort';
+import { FileExtfilterPipe} from '../app/file.ext.filter';
 const fbLoginOptions = {
   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
   //scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list',
@@ -61,10 +65,12 @@ const googleLoginOptions = {
     ChangepasswordComponent,
     LogoutComponent,
     MessageComponent,
-    NewtemplateComponent
+    LibraryComponent,
+    FileExtfilterPipe,
+   // NewtemplateComponent
   ],
   imports: [
-    BrowserModule,    SocialLoginModule,NgbModalModule, NgbModule,MatSliderModule,NgxBootstrapSliderModule,
+    BrowserModule,    SocialLoginModule,NgbModalModule, NgbModule,MatSliderModule,LightboxModule, MatSortModule,
     AppRoutingModule, FormsModule,RouterModule,MatTabsModule,MatSelectModule,HttpClientModule,ReactiveFormsModule,MatDialogModule,
     BrowserAnimationsModule,MatCardModule,MatSidenavModule,MatInputModule, LayoutModule, MatToolbarModule, MatButtonModule, MatIconModule, MatListModule,MatTableModule,MatCheckboxModule,MatFormFieldModule,
     RouterModule.forRoot([
