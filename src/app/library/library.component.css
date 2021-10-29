@@ -1,59 +1,151 @@
-.white{
-  margin-top: 10rem !important;
-  display: block;
-}
-.row-scrollbar{
-  max-height: calc(100vh - 239px);
-  overflow-y: auto;
-}
-
-
-.matTable {
+.row1{
   width: 100%;
 }
+  
+
+
+.white
+{
+  padding-top: 10rem !important;
+  display: block;
+  
+}
+
+.emptyLibraryImage
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+p
+{
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+.center
+{
+  text-align: center;
+}
+a
+{
+  text-decoration: none;
+  color: black;
+}
+
+
+.clear{
+  position: absolute;
+  right: 5px;
+  top: 1px;
+  
+}
+
+
 .uploadedImage
 {
   margin-left: 30px;
   background-color: white;
   border-radius: 5px;
 }
-
-.col-sm-12 .ul .li
+.cardsize
 {
-  list-style: none;
-  float: left;
+  padding: 5px;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 5px;
 }
- 
-   
-   
-.col-sm-12 .ul .li.figure .caption{
-  border-top: 1px solid #DADBDB; 
-  background-color: white;
-  width: 220px; 
-  color: black; 
-  padding: 10px;
-  cursor: pointer;
-}
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+.cardsize:hover
+{
+  border:2px solid black;
 
+}
+table
+{
+  cursor: pointer;}
+  th
+  {
+    background: white !important;
+    font-size: 18px;
+    color: black;
+    
+    text-transform: none;
+    
+  }
+  td
+  {
+    background: transparent;
+  }
+  .imageTd
+  {
+    padding: 10px;
+  }
+  .cardsize
+  {
+    padding: 5px;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 5px;
+  }
+  .cardsize:hover
+  {
+    border:2px solid black;
+ 
+  }
+  i
+  {
+    opacity: 0;
+    
+  }
+ 
+  .dataWidth
+  {
+    width: 5rem !important;
+  }
+ 
+  
+  tr:hover {
+    background:transparent;
+  }
+   td
+    {
+      background:transparent;
+    }
+    i
+    {
+      opacity: 1;
+    }
+  
+  
+  
+  .col-sm-12 .ul .li{
+    list-style: none;
+    float: left;
+  }
+  
+  .col-sm-12 .ul .li .figure  .caption{
+    border-top: 1px solid #DADBDB; 
+    background-color: white;
+    width: 220px; 
+    color: black; 
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .col-sm-12 .ul .li .figure .caption:hover{
+    background-color: rgb(214, 214, 214);
+  }
+  
+  
+  .col-sm-12 .ul .li .figure.cardsize:hover{
+    border:2px solid black;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
